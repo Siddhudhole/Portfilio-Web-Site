@@ -62,7 +62,7 @@ Having completed rigorous training, including the IBM Data Analysis with Python 
             - Certified Data Scientist
                 - Certificate Provider: Excelr Solutions Pune
                 - Certification Date: 20-09-2024
-                - Link URL: https://drive.google.com/file/d/1nUt-Kw9m8htFjB2dc00b7ag_lYhg5Vx3/view
+                - Link URL: https://drive.google.com/file/d/1nUt-Kw9m8htFjB2dc00b7ag_lYhg5Vx3/view?usp=sharing
   """)
         with col4:
             streamlit.subheader("""
