@@ -2,6 +2,7 @@ import streamlit
 import requests
 from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
+from PIL import  Image 
 
 streamlit.set_page_config(layout='wide')
 
@@ -12,7 +13,8 @@ def load_lottieurl(url: str):
     return r.json()
 
 lottie_data_scienc = load_lottieurl(url="https://lottie.host/bfda9522-c7e9-4a29-8a5e-1e7a27d3c27d/VGN73p4NeD.json")
-
+heart_disease_project_image = Image.open('images\image.png')
+lottie_contact_us = load_lottieurl(url="https://lottie.host/e5aa96e5-62d8-4f6c-99c6-3a3c218698ec/54lEkuR72c.json")
 
 
     # Set the title of the app 
@@ -62,8 +64,8 @@ Having completed rigorous training, including the IBM Data Analysis with Python 
             - Certified Data Scientist
                 - Certificate Provider: Excelr Solutions Pune
                 - Certification Date: 20-09-2024
-                - Link URL: https://drive.google.com/file/d/1nUt-Kw9m8htFjB2dc00b7ag_lYhg5Vx3/view?usp=sharing
-  """)
+                """)
+            streamlit.markdown("[View Certificate](https://drive.google.com/file/d/1nUt-Kw9m8htFjB2dc00b7ag_lYhg5Vx3/view?usp=sharing)")
         with col4:
             streamlit.subheader("""
     Technical Skills
@@ -84,6 +86,54 @@ Having completed rigorous training, including the IBM Data Analysis with Python 
     - Model Management and Experiment Tracking: MLflow, Optuna
 
     - Version Control: Git, GitHub , DVC , dagshub""")
+
+if selected =='Projects':
+    with streamlit.container():
+        streamlit.subheader("My Projects")
+        col5,col6 = streamlit.columns(2)
+        with col5:
+            streamlit.write("""
+            Heart Disease Prediction using Machine Learning
+            - Dataset: UCI Heart Disease Dataset
+            - Problem Statement: Predict the presence of heart disease based on various features
+            - Model: Random Forest Classifier
+            - Accuracy: 94%
+            """)
+            streamlit.markdown('[Visit Github Repository](https://github.com/Siddhudhole/Heart-Disease-Prediction-Using-ML)')
+            streamlit.markdown('[Project Link](https://heart-disease-prediction-using-ml-demo.streamlit.app/)')
+
+        with col6:
+            streamlit.image(heart_disease_project_image) 
+
+        
+if selected =='Contact':
+    
+    
+    streamlit.subheader('My Contacts')
+    left_col , right_col = streamlit.columns(2)
+    with left_col:
+        streamlit.write("""
+        Email: siddharthdhole2358@gmail.com
+        """)
+        streamlit.write("""
+        Phone: +919322362793
+        """)
+        streamlit.markdown("""
+        LinkedIn : https://www.linkedin.com/in/siddharth-dhole-235881190/
+        """)
+        streamlit.markdown("""
+        Github : https://github.com/Siddhudhole
+        """)
+    with right_col:
+        st_lottie(lottie_contact_us,height=200)
+streamlit.write('----------------------------------------------------------------')
+
+
+
+
+
+   
+
 
 
 
