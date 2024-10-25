@@ -14,7 +14,7 @@ def load_lottieurl(url: str):
 
 lottie_data_scienc = load_lottieurl(url="https://lottie.host/bfda9522-c7e9-4a29-8a5e-1e7a27d3c27d/VGN73p4NeD.json")
 lottie_contact_us = load_lottieurl(url="https://lottie.host/e5aa96e5-62d8-4f6c-99c6-3a3c218698ec/54lEkuR72c.json")
-heart_disease_project_image = Image.open('images\image.png')
+heart_disease_project_image = Image.open('images/image.png')
 
 
     # Set the title of the app 
