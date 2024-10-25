@@ -13,8 +13,8 @@ def load_lottieurl(url: str):
     return r.json()
 
 lottie_data_scienc = load_lottieurl(url="https://lottie.host/bfda9522-c7e9-4a29-8a5e-1e7a27d3c27d/VGN73p4NeD.json")
-heart_disease_project_image = Image.open('images\image.png')
 lottie_contact_us = load_lottieurl(url="https://lottie.host/e5aa96e5-62d8-4f6c-99c6-3a3c218698ec/54lEkuR72c.json")
+heart_disease_project_image = Image.open('images\image.png')
 
 
     # Set the title of the app 
@@ -89,15 +89,20 @@ Having completed rigorous training, including the IBM Data Analysis with Python 
 
 if selected =='Projects':
     with streamlit.container():
-        streamlit.subheader("My Projects")
         col5,col6 = streamlit.columns(2)
         with col5:
+            streamlit.subheader("Heart Disease Prediction using ML")
             streamlit.write("""
-            Heart Disease Prediction using Machine Learning
-            - Dataset: UCI Heart Disease Dataset
-            - Problem Statement: Predict the presence of heart disease based on various features
-            - Model: Random Forest Classifier
-            - Accuracy: 94%
+
+- Overview : Developed a machine learning model to predict the risk of heart disease based on patient data, such as age, sex, blood pressure, cholesterol levels, and other relevant features. This project demonstrates a full machine learning pipeline, from data collection to deployment.
+
+- Technologies Used
+
+    - Programming Languages: Python
+
+    - Libraries: scikit-learn, pandas, NumPy, Matplotlib, Seaborn, Optuna, MLflow
+
+    - Tools: Jupyter Notebook, Streamlit , Streamlit Cloud
             """)
             streamlit.markdown('[Visit Github Repository](https://github.com/Siddhudhole/Heart-Disease-Prediction-Using-ML)')
             streamlit.markdown('[Project Link](https://heart-disease-prediction-using-ml-demo.streamlit.app/)')
@@ -119,7 +124,7 @@ if selected =='Contact':
         Phone: +919322362793
         """)
         streamlit.markdown("""
-        LinkedIn : https://www.linkedin.com/in/siddharth-dhole-235881190/
+        LinkedIn : https://www.linkedin.com/in/siddharthdhole
         """)
         streamlit.markdown("""
         Github : https://github.com/Siddhudhole
